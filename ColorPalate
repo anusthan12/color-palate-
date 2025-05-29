@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Web Development Color Palettes 2025</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .intro {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .intro h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .intro p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+        
+        .palette-section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        .palette {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .palette:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .palette-name {
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .palette-description {
+            font-size: 0.95em;
+            color: #6c757d;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .color-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .color-swatch {
+            flex: 1;
+            min-width: 140px;
+            height: 80px;
+            border-radius: 10px;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        
+        .color-swatch:hover {
+            transform: scale(1.05);
+        }
+        
+        .color-code {
+            background: rgba(255,255,255,0.9);
+            color: #2c3e50;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .color-name {
+            font-size: 0.8em;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 8px;
+            color: #495057;
+        }
+        
+        .usage-tips {
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+        
+        .usage-tips h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .usage-tips ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .usage-tips li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .usage-tips li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .print-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+        }
+        
+        @media print {
+            body { 
+                background: white; 
+                padding: 0; 
+            }
+            .container { 
+                box-shadow: none; 
+                border-radius: 0; 
+            }
+            .print-btn { 
+                display: none; 
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .color-row {
+                flex-direction: column;
+            }
+            
+            .color-swatch {
+                min-width: 100%;
+                height: 60px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-btn" onclick="window.print()">📄 Save as PDF</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Trending Web Development Color Palettes</h1>
+            <p>10 Modern Color Schemes for 2025</p>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <h2>Top Discussed Picks</h2>
+                <p>Color palettes are the foundation of great web design. These trending combinations blend aesthetics with functionality, ensuring your designs are both beautiful and accessible. From classic monochrome to vibrant gradients, these palettes will elevate your next project.</p>
+            </div>
+            
+            <!-- Featured Palettes Section -->
+            <div class="palette-section">
+                <h2 class="section-title">🎯 Your Requested Combinations</h2>
+                
+                <div class="palette">
+                    <div class="palette-name">1. Classic Monochrome Elegance</div>
+                    <div class="palette-description">A sophisticated black and white foundation with deep navy and soft silver accents. Perfect for professional portfolios, corporate websites, and minimalist designs.</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #000000;">
+                            <div class="color-code">#000000</div>
+                        </div>
+                        <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #eee;">
+                            <div class="color-code" style="background: rgba(0,0,0,0.1); color: #000;">#FFFFFF</div>
+                        </div>
+                        <div class="color-swatch" style="background: #1a365d;">
+                            <div class="color-code">#1A365D</div>
+                        </div>
+                        <div class="color-swatch" style="background: #e2e8f0;">
+                            <div class="color-code" style="color: #000;">#E2E8F0</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="color-name">Rich Black</div>
+                        <div class="color-name">Pure White</div>
+                        <div class="color-name">Deep Navy</div>
+                        <div class="color-name">Soft Silver</div>
+                    </div>
+                </div>
+                
+                <div class="palette">
+                    <div class="palette-name">2. Blush & Cream Romance</div>
+                    <div class="palette-description">A warm, inviting palette combining soft pink with creamy tones, enhanced by rose gold and warm beige. Ideal for lifestyle brands, beauty websites, and feminine designs.</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #f7a8b8;">
+                            <div class="color-code">#F7A8B8</div>
+                        </div>
+                        <div class="color-swatch" style="background: #fef7e7;">
+                            <div class="color-code" style="color: #000;">#FEF7E7</div>
+                        </div>
+                        <div class="color-swatch" style="background: #d4a574;">
+                            <div class="color-code">#D4A574</div>
+                        </div>
+                        <div class="color-swatch" style="background: #f5deb3;">
+                            <div class="color-code" style="color: #000;">#F5DEB3</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="color-name">Soft Pink</div>
+                        <div class="color-name">Warm Cream</div>
+                        <div class="color-name">Rose Gold</div>
+                        <div class="color-name">Light Wheat</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Trending Palettes -->
+            <div class="palette-section">
+                <h2 class="section-title">🔥 8 Additional Trending Palettes</h2>
+                
+                <div class="palette">
+                    <div class="palette-name">3. Neon Cyber</div>
+                    <div class="palette-description">Electric and futuristic with bright cyan, hot magenta, electric purple, and lime green. Perfect for tech startups, gaming sites, and modern digital experiences.</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #00ffff;">
+                            <div class="color-code" style="color: #000;">#00FFFF</div>
+                        </div>
+                        <div class="color-swatch" style="background: #ff1493;">
+                            <div class="color-code">#FF1493</div>
+                        </div>
+                        <div class="color-swatch" style="background: #8a2be2;">
+                            <div class="color-code">#8A2BE2</div>
+                        </div>
+                        <div class="color-swatch" style="background: #32cd32;">
+                            <div class="color-code">#32CD32</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="color-name">Electric Cyan</div>
+                        <div class="color-name">Hot Magenta</div>
+                        <div class="color-name">Electric Purple</div>
+                        <div class="color-name">Lime Green</div>
+                    </div>
+                </div>
+                
+                <div class="palette">
+                    <div class="palette-name">4. Ocean Depth</div>
+                    <div class="palette-description">Deep sea-inspired blues with teal accents and sandy neutrals. Great for environmental sites, travel platforms, and serene user interfaces.</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #003366;">
+                            <div class="color-code">#003366</div>
+                        </div>
+                        <div class="color-swatch" style="background: #006699;">
+                            <div class="color-code">#006699</div>
+                        </div>
+                        <div class="color-swatch" style="background: #20b2aa;">
+                            <div class="color-code">#20B2AA</div>
+                        </div>
+                        <div class="color-swatch" style="background: #f4a460;">
+                            <div class="color-code">#F4A460</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="color-name">Deep Navy</div>
+                        <div class="color-name">Ocean Blue</div>
+                        <div class="color-name">Light Sea Green</div>
+                        <div class="color-name">Sandy Brown</div>
+                    </div>
+                </div>
+                
+                <div class="palette">
+                    <div class="palette-name">5. Sunset Gradient</div>
+                    <div class="palette-description">Warm gradient colors from coral to deep orange with purple undertones. Excellent for creative portfolios, food blogs, and vibrant brand identities.</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #ff7f7f;">
+                            <div class="color-code">#FF7F7F</div>
+                        </div>
+                        <div class="color-swatch" style="background: #ff6347;">
+                            <div class="color-code">#FF6347</div>
+                        </div>
+                        <div class="color-swatch" style="background: #ff4500;">
+                            <div class="color-code">#FF4500</div>
+                        </div>
+                        <div class="color-swatch" style="background: #9932cc;">
+                            <div class="color-code">#9932CC</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="color-name">Coral Pink</div>
+                        <div class="color-name">Tomato Red</div>
+                        <div class="color-name">Orange Red</div>
+                        <div class="color-name">Dark Orchid</div>
+                    </div>
+                </div>
+                
+                <div class="palette">
+                    <div class="palette-name">6. Forest Serenity</div>
+                    <div class="palette-description">Nature-inspired greens with earthy brown and soft sage tones. Perfect for wellness brands, outdoor companies, and sustainable businesses.</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #2d5016;">
+                            <div class="color-code">#2D5016</div>
+                        </div>
+                        <div class="color-swatch" style="background: #228b22;">
+                            <div class="color-code">#228B22</div>
+                        </div>
+                        <div class="color-swatch" style="background: #9acd32;">
+                            <div class="color-code">#9ACD32</div>
+                        </div>
+                        <div class="color-swatch" style="background: #8b4513;">
+                            <div class="color-code">#8B4513</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="color-name">Dark Forest</div>
+                        <div class="color-name">Forest Green</div>
+                        <div class="color-name">Yellow Green</div>
+                        <div class="color-name">Saddle Brown</div>
+                    </div>
+                </div>
+                
+                <div class="palette">
+                    <div class="palette-name">7. Modern Pastel</div>
+                    <div class="palette-description">Soft, contemporary pastels with lavender, mint, peach, and powder blue. Ideal for modern apps, SaaS products, and clean interfaces.</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #dda0dd;">
+                            <div class="color-code">#DDA0DD</div>
+                        </div>
+                        <div class="color-swatch" style="background: #98fb98;">
+                            <div class="color-code">#98FB98</div>
+                        </div>
+                        <div class="color-swatch" style="background: #ffdab9;">
+                            <div class="color-code" style="color: #000;">#FFDAB9</div>
+                        </div>
+                        <div class="color-swatch" style="background: #b0e0e6;">
+                            <div class="color-code" style="color: #000;">#B0E0E6</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="color-name">Plum</div>
+                        <div class="color-name">Pale Green</div>
+                        <div class="color-name">Peach Puff</div>
+                        <div class="color-name">Powder Blue</div>
+                    </div>
+                </div>
+                
+                <div class="palette">
+                    <div class="palette-name">8. Retro Wave</div>
+                    <div class="palette-description">80s-inspired with electric blues, hot pink, purple, and gold accents. Great for entertainment sites, music platforms, and nostalgic designs.</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #00bfff;">
+                            <div class="color-code">#00BFFF</div>
+                        </div>
+                        <div class="color-swatch" style="background: #ff69b4;">
+                            <div class="color-code">#FF69B4</div>
+                        </div>
+                        <div class="color-swatch" style="background: #9370db;">
+                            <div class="color-code">#9370DB</div>
+                        </div>
+                        <div class="color-swatch" style="background: #ffd700;">
+                            <div class="color-code" style="color: #000;">#FFD700</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="color-name">Deep Sky Blue</div>
+                        <div class="color-name">Hot Pink</div>
+                        <div class="color-name">Medium Purple</div>
+                        <div class="color-name">Gold</div>
+                    </div>
+                </div>
+                
+                <div class="palette">
+                    <div class="palette-name">9. Earth Tones</div>
+                    <div class="palette-description">Warm, grounded colors with terracotta, sage, cream, and burnt orange. Perfect for artisanal brands, cafes, and organic products.</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #cd853f;">
+                            <div class="color-code">#CD853F</div>
+                        </div>
+                        <div class="color-swatch" style="background: #9caf88;">
+                            <div class="color-code">#9CAF88</div>
+                        </div>
+                        <div class="color-swatch" style="background: #f5f5dc;">
+                            <div class="color-code" style="color: #000;">#F5F5DC</div>
+                        </div>
+                        <div class="color-swatch" style="background: #cc5500;">
+                            <div class="color-code">#CC5500</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="color-name">Peru</div>
+                        <div class="color-name">Sage Green</div>
+                        <div class="color-name">Beige</div>
+                        <div class="color-name">Burnt Orange</div>
+                    </div>
+                </div>
+                
+                <div class="palette">
+                    <div class="palette-name">10. Arctic Minimalism</div>
+                    <div class="palette-description">Cool, minimal palette with ice blue, crisp white, charcoal, and light gray. Excellent for tech companies, professional services, and clean interfaces.</div>
+                    <div class="color-row">
+                        <div class="color-swatch" style="background: #b0c4de;">
+                            <div class="color-code">#B0C4DE</div>
+                        </div>
+                        <div class="color-swatch" style="background: #f8f8ff; border: 1px solid #eee;">
+                            <div class="color-code" style="background: rgba(0,0,0,0.1); color: #000;">#F8F8FF</div>
+                        </div>
+                        <div class="color-swatch" style="background: #36454f;">
+                            <div class="color-code">#36454F</div>
+                        </div>
+                        <div class="color-swatch" style="background: #d3d3d3;">
+                            <div class="color-code" style="color: #000;">#D3D3D3</div>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <div class="color-name">Light Steel Blue</div>
+                        <div class="color-name">Ghost White</div>
+                        <div class="color-name">Charcoal</div>
+                        <div class="color-name">Light Gray</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="usage-tips">
+                <h3>💡 Color Palette Usage Tips</h3>
+                <ul>
+                    <li>Use 60-30-10 rule: 60% dominant color, 30% secondary, 10% accent</li>
+                    <li>Ensure sufficient contrast for accessibility (WCAG 2.1 guidelines)</li>
+                    <li>Test palettes across different devices and lighting conditions</li>
+                    <li>Consider color psychology and brand personality</li>
+                    <li>Create hover states and interactive variations</li>
+                    <li>Use gradient combinations for modern, dynamic effects</li>
+                    <li>Always provide fallback colors for better browser support</li>
+                    <li>Consider colorblind users when choosing color combinations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
